@@ -1,5 +1,5 @@
 # Table
-data from csv file is added to the database and a web application with the table of the same data.
+Web app using Django and HTML where the data from the CSV file is added to the database and a web application with the table of the same data.
 
 There is an existing csv file which has to read by the code and added to the SQLite database.
 The web app contains two pages:

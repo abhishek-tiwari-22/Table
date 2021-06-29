@@ -1,0 +1,13 @@
+{%extends 'base.html'%}
+
+{%block content%}
+<form method="POST" action="" class="ui form" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form}}
+        <button type="submit" class="ui button primary">Comfirm</button>
+</form>
+<a href="/csv_data">
+    ---GO TO THE TABLE---
+</a>
+{%endblock content%}
+

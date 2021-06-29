@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV-DATA</title>
+    <style>
+        table,th,td{
+            border: 1px solid #000;
+            border-collapse: collapse;
+            width: 4000px;
+        }
+        th,td{
+            padding: 10px;
+        }
+        .tablehor{
+            overflow-x: auto;
+        }
+        .colhead{
+            background-color: #167c5a;
+        }
+    </style>
+</head>
+<body>
+    <div class="tablehor">
+    <h1>Open Schooling - No. of Students</h1>
+    <table>
+        <tr class="colhead">
+        <th>Name of the Board</th>
+
+        <th>All Categories - Appeared - Boys</th>
+        <th>All Categories - Appeared - Girls</th>
+        <th>All Categories - Appeared - Total</th>
+
+        <th>All Categories - Passed - Boys</th>
+        <th>All Categories - Passed - Girls</th>
+        <th>All Categories - Passed - Total</th>
+
+        <th>SC Students - Appeared - Boys</th>
+        <th>SC Students - Appeared - Girls</th>
+        <th>SC Students - Appeared - Total</th>
+
+        <th>SC Students - Passed - Boys</th>
+        <th>SC Students - Passed - Girls</th>
+        <th>SC Students - Passed - Total</th>
+
+        <th>ST Students - Appeared - Boys</th>
+        <th>ST Students - Appeared - Girls</th>
+        <th>ST Students - Appeared - Total</th>
+
+        <th>ST Students - Passed - Boys</th>
+        <th>ST Students - Passed - Girls</th>
+        <th>ST Students - Passed - Total</th>
+    </tr>
+        {%for i in data%}
+            <tr>
+                <td>{{i.Name_of_the_Board}}</td>
+
+                <td>{{i.appeared_boys}}</td>
+                <td>{{i.appeared_girls}}</td>
+                <td>{{i.appeared_total}}</td>
+
+                <td>{{i.passed_boys}}</td>
+                <td>{{i.passed_girls}}</td>
+                <td>{{i.passed_total}}</td>
+
+                <td>{{i.sc_appeared_boys}}</td>
+                <td>{{i.sc_appeared_girls}}</td>
+                <td>{{i.sc_appeared_total}}</td>
+
+                <td>{{i.sc_passed_boys}}</td>
+                <td>{{i.sc_passed_girls}}</td>
+                <td>{{i.sc_passed_total}}</td>
+
+                <td>{{i.st_appeared_boys}}</td>
+                <td>{{i.st_appeared_girls}}</td>
+                <td>{{i.st_appeared_total}}</td>
+
+                <td>{{i.st_passed_boys}}</td>
+                <td>{{i.st_passed_girls}}</td>
+                <td>{{i.st_passed_total}}</td>
+            </tr>
+        {%endfor%}
+    </table></div>
+</body>
+</html>
